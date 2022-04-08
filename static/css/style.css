@@ -305,7 +305,7 @@ pre {
   }
 }
 #preloader {
-  background: #353353;
+  background: #33ff00;
   height: 100%;
   position: fixed;
   width: 100%;
@@ -318,7 +318,7 @@ pre {
   transform: translate(-50%, -50%);
 }
 #preloader.light {
-  background: #F9F9FF;
+  background: #33ff00;
 }
 
 .goo-outer {
