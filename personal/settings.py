@@ -164,3 +164,7 @@ django_heroku.settings(locals())
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'
 DEFAULT_AUTO_FIELD='django.db.models.AutoField'
+
+AUTHENTICATION_BACKENDS = (
+    ('django.contrib.auth.backends.ModelBackend'),
+)
