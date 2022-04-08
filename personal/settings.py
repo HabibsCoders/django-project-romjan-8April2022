@@ -38,14 +38,15 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'f^v0$q1l)3e*36&f$ctpu_lki)ou2v
 
 
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['https://nasimportfolio.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['*', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+  
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -58,7 +59,7 @@ INSTALLED_APPS = [
     'blogs',
     'works',
     'django_summernote',
-   
+     
     
 ]
 
@@ -89,6 +90,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+               
             ],
         },
     },
@@ -103,11 +105,11 @@ WSGI_APPLICATION = 'personal.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'personal_db',
-        'USER': 'nasim',
-        'PASSWORD': 'Your password',
+        'NAME': 'djangodb',
+        'USER': 'test1',
+        'PASSWORD': '204965',
         'HOST': 'localhost',
-        'PORT': '2000',
+        'PORT': '5432',
         
     }
 }
@@ -152,8 +154,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #Location of static files
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles'),
 
 
 # Activate Django-Heroku.
@@ -161,3 +163,4 @@ django_heroku.settings(locals())
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'
